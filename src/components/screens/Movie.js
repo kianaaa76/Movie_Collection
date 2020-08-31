@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { View, StyleSheet, FlatList, ActivityIndicator } from "react-native";
+import { View, StyleSheet, FlatList } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import Header from "../common/Header";
+import StatusBar from "../common/StatusBar"
 import CategoryMoviesListItem from "../utils/CategoryMoviesListItem";
 import MyText from "../common/MyText";
 
@@ -28,6 +29,7 @@ export default class Movie extends Component {
     } = this.props.navigation.state.params;
     return (
       <View style={Styles.containerStyle}>
+      <StatusBar/>
         <Header
           headerText={CategoryName}
           leftIcon={

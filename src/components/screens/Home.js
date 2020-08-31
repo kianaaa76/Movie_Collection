@@ -17,6 +17,7 @@ import MyTextInput from "../common/MyTextInput";
 import MyModal from "../common/MyModal";
 import MyText from "../common/MyText";
 import MyButton from "../common/MyButton";
+import StatusBar from "../common/StatusBar";
 import HomeListItem from "../utils/HomeListItem";
 import {
   getAllMovies,
@@ -344,6 +345,7 @@ class Home extends Component {
     const { refreshList, showDeleteModal, isSearching, showLogoutModal } = this.state;
     return (
       <View style={Styles.containerStyle}>
+      <StatusBar/>
         <Header
           headerText="Home"
           rightIcon={
@@ -415,7 +417,7 @@ class Home extends Component {
               alignItems: "center"
             }}
           >
-            <ActivityIndicator size="large" color="#000" />
+            <ActivityIndicator size="large" color="#fff" />
           </View>
         )}
       </View>
